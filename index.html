@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Aufa Ramadhan</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        font-family: "Poppins";
+      }
+
+      /* NAVBAR */
+
+      .navbar {
+        background-color: aqua;
+        box-shadow: 2px 0 3px rgba(0, 0, 0, 0.8);
+      }
+
+      .navbar .container-navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 270px;
+      }
+
+      .container-navbar .logo-navbar a,
+      .container-navbar .navlink a,
+      .container-navbar .toggle-darkmode a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .logo-navbar a {
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .navlink a {
+        margin-right: 20px;
+      }
+
+      /* END NAVBAR */
+
+      /* CONTAINER SECTION */
+
+      .container {
+        background-color: blue;
+      }
+
+      /* END CONTAINER SECTION */
+
+      /* CONTAINER HOME */
+
+      .container .container-home {
+        background-color: red;
+        width: 1000px;
+        height: 500px;
+        margin: auto;
+      }
+
+      /* END CONTAINER HOME */
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container-navbar">
+        <div class="logo-navbar">
+          <a href="#">CODEFAA</a>
+        </div>
+        <div class="navlink">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Skill</a>
+          <a href="#">Project</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="toggle-darkmode">
+          <a href="#">IN</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <section id="home">
+        <div class="container-home">hello world</div>
+      </section>
+    </div>
+  </body>
+</html>
