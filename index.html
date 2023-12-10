@@ -10,11 +10,22 @@
       * {
         padding: 0;
         margin: 0;
+        box-sizing: border-box;
       }
 
       body {
         font-family: "Poppins";
       }
+
+      /* GLOBAL STYLE  */
+
+      .header-text {
+        font-size: 24px;
+        text-align: center;
+        padding: 50px 0;
+      }
+
+      /* END GLOBAL STYLE */
 
       /* NAVBAR */
 
@@ -25,8 +36,8 @@
 
       .navbar .container-navbar {
         display: flex;
-        justify-content: space-between;
-        padding: 20px 270px;
+        justify-content: space-around;
+        padding: 20px 0;
       }
 
       .container-navbar .logo-navbar a,
@@ -58,13 +69,54 @@
       /* CONTAINER HOME */
 
       .container .container-home {
+        position: relative;
         background-color: red;
-        width: 1000px;
-        height: 500px;
-        margin: auto;
+      }
+
+      .container-home .hero {
+        background-color: yellow;
+        height: 400px;
+        /* height: ; */
+      }
+
+      .container-home .shape {
+        background-color: rebeccapurple;
+        height: 235px;
+      }
+
+      .container-home .img {
+        position: absolute;
+        top: 200px;
+        left: 43%;
+        background-color: red;
+        width: 200px;
+        height: 300px;
       }
 
       /* END CONTAINER HOME */
+
+      /* CONTAINER ABOUT */
+
+      .container .container-about {
+        padding: 0 20px 40px 20px;
+      }
+
+      .container-about .content-about {
+        display: flex;
+      }
+
+      .container-about .shape-1 {
+        background-color: burlywood;
+        width: 700px;
+        height: 400px;
+        margin-right: 40px;
+      }
+
+      .content-about p {
+        width: 50%;
+      }
+
+      /* END CONTAINER ABOUT */
     </style>
   </head>
   <body>
@@ -87,7 +139,37 @@
     </nav>
     <div class="container">
       <section id="home">
-        <div class="container-home">hello world</div>
+        <div class="container-home">
+          <div class="hero"></div>
+          <div class="img"></div>
+          <div class="shape"></div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container-about">
+          <div class="header-text">
+            <h1>About</h1>
+          </div>
+          <div class="content-about">
+            <div class="shape-1"></div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
+              iure dignissimos, voluptatibus, ex itaque eius ratione labore
+              tenetur rerum quas blanditiis? Illo dolor ipsa temporibus, officia
+              nisi ut veniam saepe earum excepturi in quasi, quibusdam maiores
+              repellat molestias, dolorum enim culpa fugit aspernatur! Quisquam,
+              at vitae recusandae consequuntur optio velit sit voluptatibus
+              illum temporibus maiores adipisci! Ut accusantium tempora corporis
+              fugiat earum obcaecati cupiditate mollitia. Totam deserunt esse
+              fugiat atque quaerat omnis exercitationem vero necessitatibus
+              sequi a accusamus, harum voluptatum. Id quaerat veniam animi
+              maxime maiores? Alias et architecto laudantium vel, amet
+              molestiae, dolores excepturi, necessitatibus magnam sint porro
+              minus!
+            </p>
+          </div>
+        </div>
       </section>
     </div>
   </body>
