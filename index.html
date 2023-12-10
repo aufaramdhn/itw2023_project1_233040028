@@ -97,7 +97,13 @@
 
       /* CONTAINER ABOUT */
 
-      .container .container-about {
+      #about {
+        background-color: blueviolet;
+      }
+
+      .container-about {
+        width: 60%;
+        margin: 0 auto;
         padding: 0 20px 40px 20px;
       }
 
@@ -107,16 +113,51 @@
 
       .container-about .shape-1 {
         background-color: burlywood;
-        width: 700px;
+        width: 400px;
         height: 400px;
         margin-right: 40px;
       }
 
-      .content-about p {
+      .content-about .desk {
         width: 50%;
       }
 
+      .tech-stack .img-shape {
+        display: flex;
+      }
+
+      .tech-stack .img-shape .shape-2 {
+        background-color: aqua;
+        width: 50px;
+        height: 50px;
+        margin-right: 4px;
+      }
+
+      .tech-stack h4 {
+        padding: 20px 0;
+      }
+
       /* END CONTAINER ABOUT */
+
+      /* CONTAINER PROJECT */
+
+      #project {
+        background-color: red;
+      }
+
+      .container-project {
+        width: 60%;
+        margin: auto;
+        padding-bottom: 20px;
+      }
+
+      .container-project .shape-3 {
+        margin: 20px auto;
+        height: 500px;
+        background-color: aqua;
+      }
+
+      /* END CONTAINER PROJECT */
     </style>
   </head>
   <body>
@@ -153,22 +194,40 @@
           </div>
           <div class="content-about">
             <div class="shape-1"></div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
-              iure dignissimos, voluptatibus, ex itaque eius ratione labore
-              tenetur rerum quas blanditiis? Illo dolor ipsa temporibus, officia
-              nisi ut veniam saepe earum excepturi in quasi, quibusdam maiores
-              repellat molestias, dolorum enim culpa fugit aspernatur! Quisquam,
-              at vitae recusandae consequuntur optio velit sit voluptatibus
-              illum temporibus maiores adipisci! Ut accusantium tempora corporis
-              fugiat earum obcaecati cupiditate mollitia. Totam deserunt esse
-              fugiat atque quaerat omnis exercitationem vero necessitatibus
-              sequi a accusamus, harum voluptatum. Id quaerat veniam animi
-              maxime maiores? Alias et architecto laudantium vel, amet
-              molestiae, dolores excepturi, necessitatibus magnam sint porro
-              minus!
-            </p>
+            <div class="desk">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Suscipit iure dignissimos, voluptatibus, ex itaque eius ratione
+                labore tenetur rerum quas blanditiis? Illo dolor ipsa
+                temporibus, officia nisi ut veniam saepe earum excepturi in
+                quasi, quibusdam maiores repellat molestias, dolorum enim culpa
+                fugit aspernatur! Quisquam, at vitae recusandae consequuntur
+                optio velit sit voluptatibus illum temporibus maiores adipisci!
+                Ut accusantium tempora corporis fugiat earum obcaecati
+                cupiditate mollitia.
+              </p>
+              <div class="tech-stack">
+                <h4>Tech Stack</h4>
+                <div class="img-shape">
+                  <div class="shape-2"></div>
+                  <div class="shape-2"></div>
+                  <div class="shape-2"></div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <section id="project">
+        <div class="container-project">
+          <div class="header-text">
+            <h1>Project</h1>
+          </div>
+          <div class="shape-3"></div>
+          <div class="shape-3"></div>
+          <div class="shape-3"></div>
+          <div class="shape-3"></div>
         </div>
       </section>
     </div>
