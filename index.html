@@ -11,6 +11,7 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+        scroll-behavior: smooth;
       }
 
       body {
@@ -25,6 +26,44 @@
         padding: 50px 0;
       }
 
+      .scroll-to-top {
+        position: fixed;
+        background-color: red;
+        right: 0;
+        bottom: 0;
+        margin-right: 12px;
+        margin-bottom: 12px;
+        display: flex;
+        place-content: center;
+        padding: 5px;
+        outline: none;
+        border: none;
+        border-radius: 50%;
+      }
+
+      .scroll-to-top img {
+        width: 30px;
+        height: 30px;
+      }
+
+      form .form-input {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.5rem;
+      }
+
+      .form-input .form-control {
+        background-color: #f4f4f4;
+        border-radius: 4px;
+        padding: 10px;
+        border: none;
+        transition: all 0.2s;
+      }
+
+      .form-control:focus-visible {
+        outline: 2px solid blue;
+      }
+
       /* END GLOBAL STYLE */
 
       /* NAVBAR */
@@ -32,6 +71,9 @@
       .navbar {
         background-color: aqua;
         box-shadow: 2px 0 3px rgba(0, 0, 0, 0.8);
+        position: sticky;
+        top: 0;
+        z-index: 10;
       }
 
       .navbar .container-navbar {
@@ -80,14 +122,16 @@
       }
 
       .container-home .shape {
+        position: relative;
+        display: flex;
+        justify-content: center;
         background-color: rebeccapurple;
         height: 235px;
       }
 
       .container-home .img {
         position: absolute;
-        top: 200px;
-        left: 43%;
+        top: -200px;
         background-color: red;
         width: 200px;
         height: 300px;
@@ -102,7 +146,7 @@
       }
 
       .container-about {
-        width: 60%;
+        width: 70%;
         margin: 0 auto;
         padding: 0 20px 40px 20px;
       }
@@ -158,6 +202,150 @@
       }
 
       /* END CONTAINER PROJECT */
+
+      /* CONTAINER CONTACT */
+
+      #contact {
+        background-color: brown;
+        padding: 0 20px 40px 20px;
+      }
+
+      .container-contact form {
+        /* background-color: bisque; */
+        width: 40%;
+        margin: 0 auto;
+      }
+
+      /* END CONTAINER CONTACT */
+
+      /* FOOTER */
+
+      #footer {
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+      }
+
+      /* END FOOTER */
+
+      /* RESPONSIVE BREAKPOINT */
+
+      @media screen and (max-width: 1024px) {
+        /* ABOUT */
+        .container-about {
+          width: 100%;
+        }
+
+        .container-about .content-about {
+          display: flex;
+        }
+
+        .container-about .shape-1 {
+          background-color: burlywood;
+          width: 100%;
+          height: 300px;
+          margin-right: 40px;
+          margin-bottom: 20px;
+        }
+
+        .content-about .desk {
+          width: 100%;
+        }
+
+        /* END ABOUT */
+
+        /* PROJECT */
+
+        .container-project {
+          width: 100%;
+          margin: auto;
+          padding: 0 20px 20px 20px;
+        }
+
+        .container-project .shape-3 {
+          margin: 20px auto;
+          height: 400px;
+          background-color: aqua;
+        }
+
+        /* END PROJECT */
+
+        /* CONTACT */
+
+        .container-contact form {
+          width: 100%;
+        }
+
+        /* END CONTACT */
+      }
+
+      @media screen and (max-width: 600px) {
+        /* NAVBAR */
+
+        .navbar .container-navbar {
+          flex-direction: column;
+          padding: 20px;
+        }
+
+        .navlink {
+          display: flex;
+          flex-direction: column;
+          margin: 12px 0;
+        }
+
+        .navlink a {
+          margin-bottom: 6px;
+        }
+
+        /* END NAVBAR */
+
+        /* ABOUT */
+        .container-about {
+          width: 100%;
+        }
+
+        .container-about .content-about {
+          display: block;
+        }
+
+        .container-about .shape-1 {
+          background-color: burlywood;
+          width: 100%;
+          height: 300px;
+          margin-right: 40px;
+          margin-bottom: 20px;
+        }
+
+        .content-about .desk {
+          width: 100%;
+        }
+
+        /* END ABOUT */
+
+        /* PROJECT */
+
+        .container-project {
+          width: 100%;
+          margin: auto;
+          padding: 0 20px 20px 20px;
+        }
+
+        .container-project .shape-3 {
+          margin: 20px auto;
+          height: 400px;
+          background-color: aqua;
+        }
+
+        /* END PROJECT */
+
+        /* CONTACT */
+
+        .container-contact form {
+          width: 100%;
+        }
+
+        /* END CONTACT */
+      }
     </style>
   </head>
   <body>
@@ -182,8 +370,9 @@
       <section id="home">
         <div class="container-home">
           <div class="hero"></div>
-          <div class="img"></div>
-          <div class="shape"></div>
+          <div class="shape">
+            <div class="img"></div>
+          </div>
         </div>
       </section>
 
@@ -230,6 +419,69 @@
           <div class="shape-3"></div>
         </div>
       </section>
+
+      <section id="contact">
+        <div class="container-contact">
+          <div class="header-text"><h1>Contact me</h1></div>
+          <form action="">
+            <div class="form-input">
+              <label for="nama">Name</label>
+              <input type="text" id="nama" name="nama" class="form-control" />
+            </div>
+            <div class="form-input">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+              />
+            </div>
+            <div class="form-input">
+              <label for="pesan">Message</label>
+              <textarea
+                name="pesan"
+                id="pesan"
+                cols="30"
+                rows="10"
+                class="form-control"
+              ></textarea>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer id="footer">codefaa</footer>
+
+      <div id="myBtn" onclick="topFunction()" class="scroll-to-top">
+        <img src="assets/img/icon/arrow-up-line.png" alt="" />
+      </div>
     </div>
+
+    <script>
+      let mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "flex";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+    </script>
   </body>
 </html>
