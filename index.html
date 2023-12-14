@@ -22,19 +22,19 @@
       <div class="navbar">
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="#">Skill</a>
+            <a href="#skill">Skill</a>
           </li>
           <li>
-            <a href="#">Project</a>
+            <a href="#project">Project</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
           <li class="toggle-darkmode">
             <a href="#">INI</a>
@@ -48,6 +48,31 @@
           <div class="hero"></div>
           <div class="shape">
             <div class="img"></div>
+            <div class="img inverted-border"></div>
+            <marquee
+              behavior="alternate"
+              direction="right"
+              width="100%"
+              height="100"
+              class="marq-1"
+              scrollamount="4"
+            >
+              Aufa Ramadhan &diams; Frontend Developer &diams; Software Engineer
+              &diams; Aufa Ramadhan &diams; Software Engineer &diams; Frontend
+              Developer
+            </marquee>
+            <marquee
+              behavior="alternate"
+              direction="left"
+              width="100%"
+              height="100"
+              class="marq-2"
+              scrollamount="4"
+            >
+              Software Engineer &diams; Frontend Developer &diams; Aufa Ramadhan
+              &diams; Software Engineer &diams; Aufa Ramadhan &diams; Frontend
+              Developer
+            </marquee>
           </div>
         </div>
       </section>
@@ -89,10 +114,10 @@
           <div class="header-text">
             <h1>Project</h1>
           </div>
-          <div class="shape-3"></div>
-          <div class="shape-3"></div>
-          <div class="shape-3"></div>
-          <div class="shape-3"></div>
+          <div class="card-project"></div>
+          <div class="card-project"></div>
+          <div class="card-project"></div>
+          <div class="card-project"></div>
         </div>
       </section>
 
@@ -133,39 +158,6 @@
         <img src="assets/img/icon/arrow-up-line.png" alt="" />
       </div>
     </div>
-
-    <script>
-      let mybutton = document.getElementById("myBtn");
-
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "flex";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-
-      // When the user clicks on the button, scroll to the top of the document
-      function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-      }
-
-      const menuToggle = document.querySelector(".menu-toggle input");
-      const navBar = document.querySelector(".navbar");
-      // const nav = document.querySelector("nav");
-
-      menuToggle.addEventListener("click", function () {
-        navBar.classList.toggle("slide");
-      });
-    </script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+:root {
+  --dark-primary-color: #0f0f0f;
+  --dark-secondary-color: #191919;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -9,6 +14,8 @@
 
 body {
   font-family: "Poppins";
+  width: 100%;
+  /* overflow-x: hidden; */
 }
 
 /* GLOBAL STYLE  */
@@ -17,6 +24,8 @@ body {
   font-size: 24px;
   text-align: center;
   padding: 50px 0;
+  color: white;
+  font-weight: bold;
 }
 
 .scroll-to-top {
@@ -58,12 +67,42 @@ form .form-input {
   outline: 2px solid blue;
 }
 
+.inverted-border {
+  background-color: yellow;
+}
+
+.inverted-border:before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  bottom: 50px;
+  right: -45px;
+  height: 50px;
+  width: 25px;
+  border-top-left-radius: 40px;
+  box-shadow: 0 -25px 0 0 var(--dark-secondary-color);
+  z-index: 0;
+}
+
+.inverted-border::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  bottom: 50px;
+  left: -45px;
+  height: 50px;
+  width: 25px;
+  border-top-right-radius: 40px;
+  box-shadow: 0 -25px 0 0 var(--dark-secondary-color);
+  z-index: 0;
+}
+
 /* END GLOBAL STYLE */
 
 /* NAVBAR */
 
 nav {
-  background-color: aqua;
+  background-color: var(--dark-primary-color);
   position: sticky;
   display: flex;
   justify-content: space-around;
@@ -72,6 +111,7 @@ nav {
   padding: 0 20px;
   width: 100%;
   z-index: 10;
+  color: white;
 }
 
 nav .logo-nav {
@@ -98,6 +138,7 @@ nav .logo-nav {
 .navbar ul li a {
   margin-right: 10px;
   text-decoration: none;
+  color: white;
 }
 
 .navbar .toggle-darkmode {
@@ -159,9 +200,9 @@ nav .logo-nav {
 
 /* CONTAINER SECTION */
 
-.container {
-  background-color: blue;
-}
+/* .container {
+  background-color: #333;
+} */
 
 /* END CONTAINER SECTION */
 
@@ -173,7 +214,7 @@ nav .logo-nav {
 }
 
 .container-home .hero {
-  background-color: yellow;
+  background-color: var(--dark-secondary-color);
   height: 400px;
   /* height: ; */
 }
@@ -182,7 +223,7 @@ nav .logo-nav {
   position: relative;
   display: flex;
   justify-content: center;
-  background-color: rebeccapurple;
+  background-color: var(--dark-primary-color);
   height: 235px;
 }
 
@@ -194,12 +235,36 @@ nav .logo-nav {
   height: 300px;
 }
 
+.container-home .img:nth-child(1) {
+  position: absolute;
+  top: 0;
+  background-color: var(--dark-secondary-color);
+  width: 240px;
+  height: 120px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.container-home .marq-1 {
+  font-size: 42px;
+  position: absolute;
+  bottom: -40px;
+  color: white;
+}
+
+.container-home .marq-2 {
+  font-size: 42px;
+  position: absolute;
+  bottom: 10px;
+  color: white;
+}
+
 /* END CONTAINER HOME */
 
 /* CONTAINER ABOUT */
 
 #about {
-  background-color: blueviolet;
+  background-color: var(--dark-primary-color);
 }
 
 .container-about {
@@ -223,6 +288,10 @@ nav .logo-nav {
   width: 50%;
 }
 
+.content-about .desk p {
+  color: white;
+}
+
 .tech-stack .img-shape {
   display: flex;
 }
@@ -243,7 +312,7 @@ nav .logo-nav {
 /* CONTAINER PROJECT */
 
 #project {
-  background-color: red;
+  background-color: var(--dark-secondary-color);
 }
 
 .container-project {
@@ -252,10 +321,11 @@ nav .logo-nav {
   padding-bottom: 20px;
 }
 
-.container-project .shape-3 {
+.container-project .card-project {
   margin: 20px auto;
   height: 500px;
-  background-color: aqua;
+  background-color: white;
+  border-radius: 12px;
 }
 
 /* END CONTAINER PROJECT */
@@ -271,6 +341,10 @@ nav .logo-nav {
   /* background-color: bisque; */
   width: 40%;
   margin: 0 auto;
+}
+
+.form-input textarea {
+  resize: none;
 }
 
 /* END CONTAINER CONTACT */
@@ -319,7 +393,7 @@ nav .logo-nav {
     padding: 0 20px 20px 20px;
   }
 
-  .container-project .shape-3 {
+  .container-project .card-project {
     margin: 20px auto;
     height: 400px;
     background-color: aqua;
@@ -358,7 +432,7 @@ nav .logo-nav {
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: aqua;
+    background-color: var(--dark-primary-color);
     height: 0;
     overflow: hidden;
     transition: all 1s ease-in;
@@ -419,7 +493,7 @@ nav .logo-nav {
     padding: 0 20px 20px 20px;
   }
 
-  .container-project .shape-3 {
+  .container-project .card-project {
     margin: 20px auto;
     height: 400px;
     background-color: aqua;
