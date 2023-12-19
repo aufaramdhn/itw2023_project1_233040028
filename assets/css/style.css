@@ -8,15 +8,19 @@
   --accent-color: #5130ef;
   --shadow-primary: rgba(24, 22, 35, 0.6);
   --text-color: #eceaf5;
+  --shadow-nav: #eceaf5;
+  --shadow-toggle-darkmode: #f1effacf;
 }
 
 [theme="light"] {
-  --background-color: #f1effa;
-  --primary-color: #816de9;
-  --secondary-color: #4934b0;
-  --accent-color: #3010d1;
+  --background-color: #e3e7ef;
+  --primary-color: #0d091d;
+  --secondary-color: #0f0830;
+  --accent-color: #5130ef;
   --shadow-primary: rgba(24, 22, 35, 0.6);
   --text-color: #0c0a15;
+  --shadow-nav: rgba(24, 22, 35, 0.6);
+  --shadow-toggle-darkmode: #1e1e1fcf;
 }
 
 * {
@@ -44,41 +48,101 @@ body {
 
 .scroll-to-top {
   position: fixed;
-  background-color: red;
+  background-color: var(--accent-color);
   right: 0;
   bottom: 0;
   margin-right: 12px;
   margin-bottom: 12px;
   display: flex;
   place-content: center;
-  padding: 5px;
-  outline: none;
-  border: none;
   border-radius: 50%;
   cursor: pointer;
+  width: 40px;
+  height: 40px;
 }
 
-.scroll-to-top img {
-  width: 30px;
-  height: 30px;
+.scroll-to-top i {
+  font-size: 34px;
+  color: #f1effa;
 }
 
-form .form-input {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0.5rem;
+/* Input container */
+.input-container {
+  position: relative;
+  margin: 40px 0;
 }
 
-.form-input .form-control {
-  background-color: #f4f4f4;
-  border-radius: 4px;
+/* Input field */
+.input-field {
+  display: block;
+  width: 100%;
   padding: 10px;
+  font-size: 16px;
   border: none;
-  transition: all 0.2s;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background-color: transparent;
+  color: #f1effa;
 }
 
-.form-control:focus-visible {
-  outline: 2px solid blue;
+/* Input label */
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgba(204, 204, 204, 0);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Input highlight */
+.input-highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+/* Input field:focus styles */
+.input-field:focus + .input-label {
+  top: -20px;
+  font-size: 12px;
+  color: var(--accent-color);
+}
+
+.input-field:focus + .input-label + .input-highlight {
+  width: 100%;
+}
+
+.send {
+  display: flex;
+  justify-content: end;
+}
+
+.button {
+  color: #f1effa;
+  cursor: pointer;
+  border: 1px solid var(--background-color);
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  background: var(--accent-color);
+  transition: 0.2s;
+}
+
+.button:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: #f1effa;
+  box-shadow: 0.25rem 0.25rem var(--accent-color);
+}
+
+.button:active {
+  transform: translate(0);
+  box-shadow: none;
 }
 
 .inverted-border {
@@ -116,7 +180,8 @@ form .form-input {
 /* NAVBAR */
 
 nav {
-  background-color: var(--background-color);
+  background-color: transparent;
+  backdrop-filter: blur(60px);
   position: sticky;
   top: 0;
   display: flex;
@@ -127,7 +192,7 @@ nav {
   width: 100%;
   z-index: 10;
   color: var(--text-color);
-  box-shadow: 0 0 1px var(--shadow-primary);
+  box-shadow: 0 0 4px var(--shadow-nav);
 }
 
 nav .logo-nav {
@@ -164,11 +229,11 @@ nav .logo-nav {
   justify-content: center;
   align-items: center;
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: white;
   border-radius: 8px;
   padding: 6px;
   cursor: pointer;
-  box-shadow: 1px 1px 8px rgba(77, 77, 77, 0.1);
+  box-shadow: 0px 0px 4px var(--shadow-toggle-darkmode);
 }
 
 /* END NAVBAR */
@@ -241,7 +306,7 @@ nav .logo-nav {
 }
 
 .container-home .hero {
-  height: 350px;
+  height: 450px;
   width: 100%;
   /* height: ; */
 }
@@ -262,7 +327,7 @@ nav .logo-nav {
   height: 350px;
   z-index: 2;
   border-radius: 12px;
-  box-shadow: 2px 2px 8px var(--background-color);
+  box-shadow: 2px 2px 8px var(--shadow-primary);
 }
 
 .container-home .img {
@@ -346,7 +411,7 @@ nav .logo-nav {
   background-color: var(--primary-color);
   backdrop-filter: blur(20px);
   position: absolute;
-  top: 260px;
+  top: 320px;
   border-radius: 50%;
   box-shadow: 0 -1px 12px var(--shadow-primary);
 }
@@ -470,13 +535,17 @@ nav .logo-nav {
   padding: 0 20px 40px 20px;
 }
 
+.container-contact .header-text {
+  color: #f1effa;
+}
+
 .container-contact form {
   /* background-color: bisque; */
   width: 40%;
   margin: 0 auto;
 }
 
-.form-input textarea {
+.input-container textarea {
   resize: none;
 }
 

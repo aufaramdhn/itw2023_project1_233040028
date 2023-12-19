@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/remixicon@4.0.1/fonts/remixicon.min.css"
     />
+    <link rel="stylesheet" href="assets/css/particle.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -41,12 +43,16 @@
           <li>
             <a href="#contact">Contact</a>
           </li>
-          <li class="">
-            <i class="ri-sun-foggy-line toggle-darkmode" id="toggleDark"></i>
+          <li>
+            <i class="ri-sun-cloudy-fill toggle-darkmode" id="toggleDark"></i>
           </li>
         </ul>
       </div>
     </nav>
+    <div id="particles-js"></div>
+    <div class="count-particles">
+      <span class="js-count-particles">--</span> particles
+    </div>
     <div class="container">
       <section id="home">
         <div class="container-home">
@@ -55,25 +61,26 @@
           <div class="shape">
             <!-- <div class="img"></div> -->
             <img
+              data-aos="fade-up"
               src="assets/img/profile/IMG_20230531_064642.jpg"
               alt=""
               srcset=""
             />
             <div class="img"></div>
             <div class="img inverted-border"></div>
-            <h1>Hi, There</h1>
+            <h1 data-aos="fade-right">Hi, There</h1>
             <div class="card-media">
-              <div class="media">
+              <div data-aos="fade-up-left" class="media">
                 <a href="https://github.com/aufaramdhn" target="_blank">
                   <i class="ri-github-fill"></i>
                 </a>
               </div>
-              <div class="media">
+              <div data-aos="fade-up-left" class="media">
                 <a href="https://instagram.com/aufaramdhn" target="_blank">
                   <i class="ri-instagram-line"></i>
                 </a>
               </div>
-              <div class="media">
+              <div data-aos="fade-up-left" class="media">
                 <a href="https://www.tiktok.com/@aufaramdhn" target="_blank">
                   <i class="ri-tiktok-line"></i>
                 </a>
@@ -86,6 +93,7 @@
               height="100"
               class="marq-1"
               scrollamount="4"
+              data-aos="fade-right"
             >
               Aufa Ramadhan &diams; Frontend Developer &diams; Software Engineer
               &diams; Aufa Ramadhan &diams; Software Engineer &diams; Frontend
@@ -98,6 +106,7 @@
               height="100"
               class="marq-2"
               scrollamount="4"
+              data-aos="fade-left"
             >
               Software Engineer &diams; Frontend Developer &diams; Aufa Ramadhan
               &diams; Software Engineer &diams; Aufa Ramadhan &diams; Frontend
@@ -137,54 +146,54 @@
             <h1>Skills</h1>
           </div>
           <div class="skills">
-            <div class="card-skill">
+            <div data-aos="fade-up" class="card-skill">
               <img src="assets/img/icon/html-icon.svg" alt="html" srcset="" />
             </div>
-            <div class="card-skill">
+            <div data-aos="fade-up" class="card-skill">
               <img src="assets/img/icon/css-icon.svg" alt="css" srcset="" />
             </div>
-            <div class="card-skill">
+            <div data-aos="fade-up" class="card-skill">
               <img
                 src="assets/img/icon/javascript-icon.svg"
                 alt="js"
                 srcset=""
               />
             </div>
-            <div class="card-skill">
+            <div data-aos="fade-up" class="card-skill">
               <img
                 src="assets/img/icon/bootstrap-icon.svg"
                 alt="tailwind"
                 srcset=""
               />
             </div>
-            <div class="card-skill">
+            <div data-aos="fade-up" class="card-skill">
               <img
                 src="assets/img/icon/tailwind-css-icon.svg"
                 alt="tailwind"
                 srcset=""
               />
             </div>
-            <div class="card-skill">
+            <div data-aos="fade-up" class="card-skill">
               <img
                 src="assets/img/icon/material-ui-icon.svg"
                 alt="m-ui"
                 srcset=""
               />
             </div>
-            <div class="card-skill">
+            <div data-aos="fade-up" class="card-skill">
               <img src="assets/img/icon/react-icon.svg" alt="react" srcset="" />
             </div>
-            <div class="card-skill">
+            <div data-aos="fade-up" class="card-skill">
               <img
                 src="assets/img/icon/react-native-icon.svg"
                 alt="react"
                 srcset=""
               />
             </div>
-            <div class="card-skill">
+            <div data-aos="fade-up" class="card-skill">
               <img src="assets/img/icon/php-icon.svg" alt="react" srcset="" />
             </div>
-            <div class="card-skill">
+            <div data-aos="fade-up" class="card-skill">
               <img src="assets/img/icon/mysql-icon.svg" alt="react" srcset="" />
             </div>
           </div>
@@ -209,28 +218,30 @@
             <h1>Contact me</h1>
           </div>
           <form action="">
-            <div class="form-input">
-              <label for="nama">Name</label>
-              <input type="text" id="nama" name="nama" class="form-control" />
+            <div class="input-container">
+              <input placeholder="Full Name" class="input-field" type="text" />
+              <label for="input-field" class="input-label">Full Name</label>
+              <span class="input-highlight"></span>
             </div>
-            <div class="form-input">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="form-control"
-              />
+            <div class="input-container">
+              <input placeholder="Email" class="input-field" type="text" />
+              <label for="input-field" class="input-label">Email</label>
+              <span class="input-highlight"></span>
             </div>
-            <div class="form-input">
-              <label for="pesan">Message</label>
+            <div class="input-container">
               <textarea
-                name="pesan"
-                id="pesan"
-                cols="30"
-                rows="10"
-                class="form-control"
+                placeholder="Message"
+                class="input-field"
+                type="text"
+                cols="4"
+                rows="4"
+                contenteditable="true"
               ></textarea>
+              <label for="input-field" class="input-label">Message</label>
+              <span class="input-highlight"></span>
+            </div>
+            <div class="send">
+              <button class="button">Send!</button>
             </div>
           </form>
         </div>
@@ -239,11 +250,19 @@
       <footer id="footer">codefaa</footer>
 
       <div id="myBtn" onclick="topFunction()" class="scroll-to-top">
-        <img src="assets/img/icon/arrow-up-line.png" alt="" />
+        <i class="ri-arrow-up-s-line"></i>
       </div>
     </div>
     <script src="assets/js/navBar.js"></script>
     <script src="assets/js/scrollToTop.js"></script>
     <script src="assets/js/darkMode.js"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- stats.js lib -->
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="assets/js/particle.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

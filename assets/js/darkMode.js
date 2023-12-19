@@ -7,7 +7,7 @@ if (currentTheme === "dark") {
 }
 
 btn.addEventListener("click", function () {
-  //   this.classList.toggle("ri-sun-line");
+  this.classList.toggle("ri-moon-foggy-fill");
   setTheme();
 });
 
@@ -24,13 +24,9 @@ function setTheme() {
 function setLightMode() {
   document.body.setAttribute("theme", "light");
   localStorage.setItem("theme", "light");
-  // btn.classList.remove("ri-moon-line")
-  // btn.classList.add("ri-sun-line")
 }
 
 function setDarkMode() {
   document.body.removeAttribute("theme");
   localStorage.setItem("theme", "dark");
-  // btn.classList.remove("ri-sun-line")
-  // btn.classList.add("ri-moon-line")
 }
