@@ -7,7 +7,7 @@ if (currentTheme === "dark") {
 }
 
 btn.addEventListener("click", function () {
-  this.classList.toggle("ri-moon-foggy-fill");
+  this.classList.toggle("ri-moon-fill");
   setTheme();
 });
 
@@ -15,8 +15,11 @@ function setTheme() {
   let currentTheme = document.body.getAttribute("theme");
 
   if (currentTheme === "light") {
+    btn.classList.add("ri-sun-fill");
     setDarkMode();
   } else {
+    btn.classList.remove("ri-sun-fill");
+    // btn.classList.toggle("ri-moon-fill");
     setLightMode();
   }
 }
