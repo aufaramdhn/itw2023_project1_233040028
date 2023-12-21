@@ -14,8 +14,8 @@
 
 [theme="light"] {
   --background-color: #e3e7ef;
-  --primary-color: #0d091d;
-  --secondary-color: #0f0830;
+  --primary-color: #dedede;
+  --secondary-color: #8ea7e9;
   --accent-color: #5130ef;
   --shadow-primary: rgba(24, 22, 35, 0.6);
   --text-color: #0c0a15;
@@ -79,7 +79,7 @@ body {
   padding: 10px;
   font-size: 16px;
   border: none;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #f1effa;
   outline: none;
   background-color: transparent;
   color: #f1effa;
@@ -94,6 +94,10 @@ body {
   color: rgba(204, 204, 204, 0);
   pointer-events: none;
   transition: all 0.3s ease;
+}
+
+.input-field::placeholder {
+  color: #f1effa;
 }
 
 /* Input highlight */
@@ -560,9 +564,45 @@ ul li a.scrolled:before {
 
 .container-project .card-project {
   margin: 20px auto;
-  height: 500px;
+  width: 650px;
   background-color: white;
   border-radius: 12px;
+}
+
+.card-project img {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.card-project .content {
+  padding: 10px 20px;
+}
+
+.content .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content span {
+  /* background-color: red; */
+  padding: 4px 8px;
+  /* border-radius: 6px; */
+  /* font-size: 16px; */
+}
+
+.content .tech-stack {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.tech-stack .tech img {
+  width: 30px;
+  height: 30px;
+  border-radius: 0;
+  /* background-color: red; */
 }
 
 /* END CONTAINER PROJECT */
@@ -593,7 +633,7 @@ ul li a.scrolled:before {
 /* FOOTER */
 
 #footer {
-  background-color: var(--primary-color);
+  background-color: #0d091d;
   height: 60px;
   text-align: center;
   line-height: 60px;
@@ -687,10 +727,18 @@ ul li a.scrolled:before {
   }
 
   .container-project .card-project {
+    /* margin: 20px auto; */
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+  }
+
+  /*
+  .container-project .card-project {
     margin: 20px auto;
     height: 400px;
     background-color: aqua;
-  }
+  } */
 
   /* END PROJECT */
 
@@ -810,7 +858,7 @@ ul li a.scrolled:before {
 
   /* PROJECT */
 
-  .container-project {
+  /* .container-project {
     width: 100%;
     margin: auto;
     padding: 0 20px 20px 20px;
@@ -818,9 +866,8 @@ ul li a.scrolled:before {
 
   .container-project .card-project {
     margin: 20px auto;
-    height: 400px;
     background-color: aqua;
-  }
+  } */
 
   /* END PROJECT */
 
