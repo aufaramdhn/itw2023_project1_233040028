@@ -59,10 +59,9 @@
           <div class="hero"></div>
           <div class="shape-circle"></div>
           <div class="shape">
-            <!-- <div class="img"></div> -->
             <img
               data-aos="fade-up"
-              src="assets/img/profile/IMG_20230531_064642.jpg"
+              src="assets/img/profile/home-profile.jpg"
               alt=""
               srcset=""
             />
@@ -119,21 +118,27 @@
       <section id="about">
         <div class="container-about">
           <div data-aos="fade-down" class="header-text">
-            <h1>About</h1>
+            <h1>About <span>Me</span></h1>
           </div>
           <div class="content-about">
-            <div data-aos="fade-right" class="shape-1"></div>
+            <div data-aos="fade-right" class="wrap-img">
+              <img
+                src="assets/img/profile/about-profile.jpeg"
+                alt=""
+                srcset=""
+              />
+            </div>
             <div data-aos="fade-left" class="desk">
               <p>
-                MAS lorem. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Suscipit iure dignissimos, voluptatibus, ex itaque eius
-                ratione labore tenetur rerum quas blanditiis? Illo dolor ipsa
-                temporibus, officia nisi ut veniam saepe earum excepturi in
-                quasi, quibusdam maiores repellat molestias, dolorum enim culpa
-                fugit aspernatur! Quisquam, at vitae recusandae consequuntur
-                optio velit sit voluptatibus illum temporibus maiores adipisci!
-                Ut accusantium tempora corporis fugiat earum obcaecati
-                cupiditate mollitia.
+                Hello everyone! I am Aufa Ramadhan, a passionate Frontend
+                Developer with expertise in Html, Css, JavaScript. With a blend
+                of creativity and technical proficiency, I like to create simple
+                and elegant websites, and I am also very interested in
+                technology development. I bring 3 months of experience at PT
+                Sistem Managemen Dewarangga. My journey at PT Sistem Managemen
+                Dewarangga has equipped me with JavaScript skills. My position
+                as a Mobile Developer using React Native, a little mastering
+                WordPress and React JS.
               </p>
             </div>
           </div>
@@ -207,13 +212,18 @@
           </div>
           <div data-aos="fade-right" class="card-project">
             <img src="assets/img/project/project-1.png" alt="" srcset="" />
-            <div class="content">
-              <div class="header-content">
+            <div class="project">
+              <div class="header-project">
                 <h1>LinkmeV2</h1>
-                <span class="button"
-                  ><i class="ri-github-fill"></i> Visit
-                  <i class="ri-arrow-right-up-line"></i
-                ></span>
+                <div class="wrap-btn">
+                  <span class="button">
+                    Demo <i class="ri-arrow-right-up-line"></i
+                  ></span>
+                  <span class="button"
+                    ><i class="ri-github-fill"></i> Visit
+                    <i class="ri-arrow-right-up-line"></i
+                  ></span>
+                </div>
               </div>
               <h3>Technology Used</h3>
               <div class="tech-stack">
@@ -235,13 +245,18 @@
           </div>
           <div data-aos="fade-left" class="card-project">
             <img src="assets/img/project/project-2.png" alt="" srcset="" />
-            <div class="content">
-              <div class="header-content">
+            <div class="project">
+              <div class="header-project">
                 <h1>PortfolioV1</h1>
-                <span class="button"
-                  ><i class="ri-github-fill"></i> Visit
-                  <i class="ri-arrow-right-up-line"></i
-                ></span>
+                <div class="wrap-btn">
+                  <span class="button">
+                    Demo <i class="ri-arrow-right-up-line"></i
+                  ></span>
+                  <span class="button"
+                    ><i class="ri-github-fill"></i> Visit
+                    <i class="ri-arrow-right-up-line"></i
+                  ></span>
+                </div>
               </div>
               <h3>Technology Used</h3>
               <div class="tech-stack">
@@ -256,19 +271,22 @@
                   />
                 </div>
                 <div class="tech">
-                  <!-- <img
-                    src="assets/img/icon/javascript-icon.svg"
+                  <img src="assets/img/icon/vitejs-icon.svg" alt="" srcset="" />
+                </div>
+                <div class="tech">
+                  <img
+                    src="assets/img/icon/framer-motion-icon.svg"
                     alt=""
                     srcset=""
-                  /> -->
+                  />
                 </div>
               </div>
             </div>
           </div>
           <div data-aos="fade-right" class="card-project">
             <img src="assets/img/project/project-3.png" alt="" srcset="" />
-            <div class="content">
-              <div class="header-content">
+            <div class="project">
+              <div class="header-project">
                 <h1>Aplikasi Koperasi</h1>
                 <span class="button"
                   ><i class="ri-github-fill"></i> Visit
@@ -308,13 +326,18 @@
           </div>
           <div data-aos="fade-left" class="card-project">
             <img src="assets/img/project/project-4.png" alt="" srcset="" />
-            <div class="content">
-              <div class="header-content">
+            <div class="project">
+              <div class="header-project">
                 <h1>PortfolioV2</h1>
-                <span class="button"
-                  ><i class="ri-github-fill"></i> Visit
-                  <i class="ri-arrow-right-up-line"></i
-                ></span>
+                <div class="wrap-btn">
+                  <span class="button">
+                    Demo <i class="ri-arrow-right-up-line"></i
+                  ></span>
+                  <span class="button"
+                    ><i class="ri-github-fill"></i> Visit
+                    <i class="ri-arrow-right-up-line"></i
+                  ></span>
+                </div>
               </div>
               <h3>Technology Used</h3>
               <div class="tech-stack">
@@ -340,17 +363,31 @@
       <section id="contact">
         <div class="container-contact">
           <div data-aos="fade-down" class="header-text">
-            <h1>Contact me</h1>
+            <h1>Contact <span>Me</span></h1>
           </div>
-          <form action="">
+          <form action="" name="submit-to-google-sheet">
             <div class="input-container" data-aos="fade-up">
-              <input placeholder="Full Name" class="input-field" type="text" />
-              <label for="input-field" class="input-label">Full Name</label>
+              <input
+                placeholder="Full Name"
+                class="input-field"
+                type="text"
+                name="nama"
+                id="nama"
+                required
+              />
+              <label for="nama" class="input-label">Full Name</label>
               <span class="input-highlight"></span>
             </div>
             <div class="input-container" data-aos="fade-up">
-              <input placeholder="Email" class="input-field" type="text" />
-              <label for="input-field" class="input-label">Email</label>
+              <input
+                placeholder="Email"
+                class="input-field"
+                type="text"
+                name="email"
+                id="email"
+                required
+              />
+              <label for="email" class="input-label">Email</label>
               <span class="input-highlight"></span>
             </div>
             <div class="input-container" data-aos="fade-up">
@@ -361,14 +398,31 @@
                 cols="4"
                 rows="4"
                 contenteditable="true"
+                name="pesan"
+                id="pesan"
+                required
               ></textarea>
-              <label for="input-field" class="input-label">Message</label>
+              <label for="pesan" class="input-label">Message</label>
               <span class="input-highlight"></span>
             </div>
             <div class="send" data-aos="fade-up">
-              <button class="button">Send!</button>
+              <button class="button" type="submit">Send!</button>
+            </div>
+            <div class="loaders none">
+              <div class="wrap-loader" data-aos="fade-up">
+                <div class="loader"></div>
+                <span>loading...</span>
+              </div>
             </div>
           </form>
+        </div>
+        <div class="alert-close alert-success alert">
+          <span>Thank you, your message has been sent.</span>
+          <i class="ri-close-fill" onclick="closeAlert(event)"></i>
+        </div>
+        <div class="alert-close alert-danger alert">
+          <span>Sorry, your message was not sent</span>
+          <i class="ri-close-fill" onclick="closeAlert(event)"></i>
         </div>
       </section>
 
@@ -390,9 +444,8 @@
     <script src="assets/js/navBar.js"></script>
     <script src="assets/js/scrollToTop.js"></script>
     <script src="assets/js/darkMode.js"></script>
+    <script src="assets/js/spreadSheet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <!-- stats.js lib -->
-    <!-- <script src="https://threejs.org/examples/js/libs/stats.min.js"></script> -->
     <script src="assets/js/particle.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
