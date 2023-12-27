@@ -34,7 +34,7 @@ body {
   font-family: "Poppins";
   /* width: 100%; */
   background-color: var(--background-color);
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   /* width: 100%; */
 }
 
@@ -813,7 +813,7 @@ ul li a.scrolled:before {
   /* ABOUT */
   .container-about {
     width: 100%;
-    padding: 0 80px;
+    /* padding: 0 80px; */
   }
 
   .container-about .content-about {
@@ -993,6 +993,12 @@ ul li a.scrolled:before {
 
   .container-contact form {
     width: 100%;
+  }
+
+  .alert-success,
+  .alert-danger {
+    right: 10px;
+    font-size: 12px;
   }
 
   /* END CONTACT */
