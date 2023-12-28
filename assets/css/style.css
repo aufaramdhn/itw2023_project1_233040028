@@ -270,8 +270,7 @@ body {
 
 nav {
   background-color: var(--background-color);
-  /* backdrop-filter: blur(100px); */
-  position: sticky;
+  position: fixed;
   top: 0;
   display: flex;
   justify-content: space-around;
@@ -423,6 +422,7 @@ ul li a.scrolled:before {
   align-items: center;
   position: relative;
   overflow: hidden;
+  padding-top: 50px;
 }
 
 .container-home .hero {
@@ -655,11 +655,14 @@ ul li a.scrolled:before {
   justify-content: space-between;
 }
 
-.header-project span {
-  /* background-color: red; */
+.header-project a {
+  text-decoration: none;
   padding: 4px 8px;
-  /* border-radius: 6px; */
-  /* font-size: 16px; */
+}
+
+.project h1,
+.project h3 {
+  font-weight: 400;
 }
 
 .project .tech-stack {
@@ -672,7 +675,6 @@ ul li a.scrolled:before {
   width: 30px;
   height: 30px;
   border-radius: 0;
-  /* background-color: red; */
 }
 
 /* END CONTAINER PROJECT */
@@ -690,7 +692,6 @@ ul li a.scrolled:before {
 }
 
 .container-contact form {
-  /* background-color: bisque; */
   width: 40%;
   margin: 0 auto;
 }
@@ -812,12 +813,12 @@ ul li a.scrolled:before {
 
   .container-about .content-about {
     flex-direction: column;
+    align-items: center;
   }
 
   .container-about img {
-    width: 350;
+    width: 100%;
     height: 350px;
-    margin-right: 40px;
     margin-bottom: 20px;
   }
 
@@ -853,6 +854,11 @@ ul li a.scrolled:before {
 }
 
 @media screen and (max-width: 600px) {
+  .header-project .button,
+  .wrap-btn .button {
+    font-size: 12px;
+  }
+
   /* NAVBAR */
 
   .navbar-header {
@@ -959,15 +965,35 @@ ul li a.scrolled:before {
 
   /* PROJECT */
 
+  .container-project {
+    width: 100%;
+  }
+
+  .container-project .card-project {
+    width: 95%;
+  }
+
   .project .header-project {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 10px;
   }
 
-  .header-project span,
+  .header-project a,
   .header-project .wrap-btn {
     margin-top: 10px;
+  }
+
+  .project h1,
+  .project h3 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .tech-stack .tech img {
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
   }
 
   /* END PROJECT */
