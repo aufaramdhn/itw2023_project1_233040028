@@ -1,6 +1,5 @@
 const btn = document.getElementById("toggleDark");
 const currentTheme = localStorage.getItem("theme");
-// const changeIcon = document.querySelector()
 
 if (currentTheme === "dark") {
   setDarkMode();
@@ -19,7 +18,6 @@ function setTheme() {
     setDarkMode();
   } else {
     btn.classList.remove("ri-sun-fill");
-    // btn.classList.toggle("ri-moon-fill");
     setLightMode();
   }
 }

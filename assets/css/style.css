@@ -15,7 +15,7 @@
 [theme="light"] {
   --background-color: #e3e7ef;
   --primary-color: #8068e1;
-  --secondary-color: #8ea7e9;
+  --secondary-color: #afc4ff;
   --accent-color: #5130ef;
   --shadow-primary: rgba(24, 22, 35, 0.6);
   --text-color: #0c0a15;
@@ -32,10 +32,8 @@
 
 body {
   font-family: "Poppins";
-  /* width: 100%; */
   background-color: var(--background-color);
   overflow-x: hidden;
-  /* width: 100%; */
 }
 
 /* GLOBAL STYLE  */
@@ -508,14 +506,6 @@ ul li a.scrolled:before {
   font-size: 32px;
 }
 
-/* .media img {
-  position: absolute;
-  top: 0;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-} */
-
 .container-home .marq-1 {
   font-size: 42px;
   position: absolute;
@@ -553,6 +543,7 @@ ul li a.scrolled:before {
   width: 70%;
   margin: 0 auto;
   padding: 0 20px 60px 20px;
+  overflow: hidden;
 }
 
 .container-about .header-text {
@@ -567,6 +558,7 @@ ul li a.scrolled:before {
 .container-about img {
   width: 350px;
   height: 350px;
+  box-shadow: 1px 1px 4px var(--shadow-primary);
   margin-right: 40px;
   border-radius: 4px;
 }
@@ -584,7 +576,6 @@ ul li a.scrolled:before {
 /* CONTAINER SKILL */
 
 .container-skill {
-  /* background-color: var(--secondary-color); */
   width: 60%;
   margin: 0 auto;
   gap: 10px;
@@ -813,7 +804,6 @@ ul li a.scrolled:before {
   /* ABOUT */
   .container-about {
     width: 100%;
-    /* padding: 0 80px; */
   }
 
   .container-about .content-about {
@@ -964,17 +954,6 @@ ul li a.scrolled:before {
   /* END SKILLS */
 
   /* PROJECT */
-
-  /* .container-project {
-    width: 100%;
-    margin: auto;
-    padding: 0 20px 20px 20px;
-  }
-
-  .container-project .card-project {
-    margin: 20px auto;
-    background-color: aqua;
-  } */
 
   .project .header-project {
     flex-direction: column;
